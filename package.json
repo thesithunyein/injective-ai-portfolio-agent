@@ -1,0 +1,40 @@
+{
+  "name": "injective-ai-portfolio-agent",
+  "version": "1.0.0",
+  "description": "AI-powered portfolio analysis and rebalancing agent for Injective",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@injectivelabs/sdk-ts": "^1.14.28",
+    "@injectivelabs/wallet-ts": "^1.14.28",
+    "@injectivelabs/networks": "^1.14.28",
+    "@cosmjs/proto-signing": "^0.32.3",
+    "@cosmjs/stargate": "^0.32.3",
+    "anthropic": "^0.28.0",
+    "lucide-react": "^0.460.0",
+    "tailwindcss": "^3.4.14",
+    "clsx": "^2.1.1",
+    "zustand": "^4.5.5",
+    "framer-motion": "^11.11.0",
+    "sonner": "^1.7.0",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.8.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20"
+  }
+}

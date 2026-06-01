@@ -1,0 +1,38 @@
+import { create } from 'zustand'
+import { Portfolio } from './injective'
+import { AIAnalysis } from './ai'
+
+interface AppState {
+  walletAddress: string | null
+  portfolio: Portfolio | null
+  analysis: AIAnalysis | null
+  loading: boolean
+  error: string | null
+  setWalletAddress: (address: string | null) => void
+  setPortfolio: (portfolio: Portfolio | null) => void
+  setAnalysis: (analysis: AIAnalysis | null) => void
+  setLoading: (loading: boolean) => void
+  setError: (error: string | null) => void
+  reset: () => void
+}
+
+export const useAppStore = create<AppState>((set) => ({
+  walletAddress: null,
+  portfolio: null,
+  analysis: null,
+  loading: false,
+  error: null,
+  setWalletAddress: (address) => set({ walletAddress: address }),
+  setPortfolio: (portfolio) => set({ portfolio }),
+  setAnalysis: (analysis) => set({ analysis }),
+  setLoading: (loading) => set({ loading }),
+  setError: (error) => set({ error }),
+  reset: () =>
+    set({
+      walletAddress: null,
+      portfolio: null,
+      analysis: null,
+      loading: false,
+      error: null,
+    }),
+}))
